@@ -1,0 +1,76 @@
+%! Author = Philipp Emmenegger
+%! Date = 30/06/2021
+
+\section{Introduction}
+\textbf{Artificial Intelligence}
+\begin{itemize}
+    \item broad concept
+    \item different interpretations
+    \item we do not have a definition of inteligence
+\end{itemize}
+\textbf{Statistical machine learning}
+\begin{itemize}
+    \item Algorithms and applications where computer learn from data
+\end{itemize}
+\textbf{AGI}
+\begin{itemize}
+    \item Artificial General Intelligence
+    \item Hypothetical computer program that can perform intellectual tasks as well as, or better than a human.
+\end{itemize}
+\textbf{Turing Test}
+\begin{itemize}
+    \item Also called imitation game
+    \item Tests of a machine's ability to exhibit intelligent behaviour equivalent to, or indistinguishable from that of a human
+    \item Has some philosophical problems (Complex problems, humans cant solve / AI must learn to lie)
+\end{itemize}
+\textbf{Examples of application (today):}
+\begin{itemize}
+    \item Personalization of news feeds
+    \item Product searching and recommendation s on eCommerce platforms
+    \item Voice-to-text
+    \item Predictive maintenance
+\end{itemize}
+\subsection{Tasks and Algorithms of Machine Learning}
+\includegraphics[width=\linewidth]{./img/machine_learning_sections.png}
+
+\subsection{Natural Language Processing (NLP)}
+\begin{itemize}
+    \item Automated processing of human language (written \& spoken)
+    \item Aims to understand and generate human (natural) language
+    \item Understanding spoken text is still difficult
+    \item Understanding written text became BIG business (search-engines)
+    \item Generating human-like conversations is still very hard
+\end{itemize}
+
+\subsection{Dialogflow}
+\textbf{Intents}
+\begin{itemize}
+    \item Recognizes the need of a user
+    \item Require training to match to user inputs
+    \item Follow up Intents (on Success)
+    \item Fallback Intents (on Failure)
+\end{itemize}
+\textbf{Entities}
+\begin{itemize}
+    \item Extract information from user inputs
+    \item Help to identifiy required intent
+    \item System Entities: (Date and time / Numbers / Amounts / Units / etc.)
+    \item Developer Entities: defined by list of words (@pizza-type / @drink / etc.)
+    \item User Entities: transient, temporary Information based on Conversation
+\end{itemize}
+\textbf{Dialog}
+\begin{itemize}
+    \item Linear: Gather a list of information
+    \item Non Linear: Using Contexts
+\end{itemize}
+\textbf{Context}
+\begin{itemize}
+    \item Each Intent can have Input \& Output Context
+    \item Intents are active based on active Context
+    \item Expire automatically
+\end{itemize}
+\textbf{Fulfillment}
+\begin{itemize}
+    \item Action triggered on fullfilled Intents
+    \item e.g. Webhook
+\end{itemize}
