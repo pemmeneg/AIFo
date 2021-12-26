@@ -1,0 +1,109 @@
+\section{Classifier Evaluation}
+\subsection{Confusion Matrix}
+\includegraphics[width=\linewidth]{./img/confusion_matrix.png}
+\textbf{Mean Accuracy:}
+\begin{itemize}
+    \item How often is the classifier correct?
+    \item $A = (t_p + t_n) / n$
+\end{itemize}
+\textbf{Mean Error:}
+\begin{itemize}
+    \item How often is the classifier wrong?
+    \item $E = (f_p + f_n) / n$
+\end{itemize}
+\textbf{Precision:}
+\begin{itemize}
+    \item When the prediction is 1, how often is it correct?
+    \item $P = t_p / (t_p + f_p)$
+\end{itemize}
+\textbf{Sensitivity, Recall, True Positive Rate (TPR):}
+\begin{itemize}
+    \item How often the prediction is 1 when it's actually 1
+    \item $R = t_p / (t_p + f_n)$
+\end{itemize}
+\textbf{Miss Rate, False Negative Rate (FNR)}
+\begin{itemize}
+    \item $MR = 1 - TPR$
+\end{itemize}
+
+\subsection{Why Accuracy is not enough?}
+\begin{itemize}
+    \item If the prediction is constant the accuracy may still look decent
+    \item E.g. allways predict false
+    \item 90\% of the data is false
+    \item Accuracy = 90\% (decent)
+    \item Precision = 0
+    \item Recall = 0
+\end{itemize}
+
+\subsection{Precision vs. Recall}
+\begin{itemize}
+    \item Increasing precision reduces Recall and vice versa
+    \item Threshold is a business decision (depending on goals)
+\end{itemize}
+
+\subsection{Receiver Operating Characteristics}
+\begin{itemize}
+    \item Defined by FPR and TPR as x and y axes
+    \item Visualizes tradeoff between TP (benefits) and FP (cost)
+\end{itemize}
+\begin{center}
+    \includegraphics[width=0.4\linewidth]{./img/roc.png}
+\end{center}
+\textbf{Area under the curve}
+\begin{itemize}
+    \item Area under the ROC curve
+    \item Shows how well the TPR and FPR is looking in the aggregate
+    \item The greater the area under the curve, the higher the quality of the model
+    \item The greater the area, the higher the ratio of TP to FP
+\end{itemize}
+
+\section{KNN}
+\subsection{Linear Seperability}
+\includegraphics[width=1\linewidth]{./img/linear_sep.png}
+
+\begin{itemize}
+    \item Based on logistic regression model, you can draw a line
+    \item This is the Linear decision boundary
+    \item If a simple line perfectly seperates the classes, then the classes are said to be linearely seperable
+\end{itemize}
+
+\subsection{Non-Linear decision boundary}
+\begin{itemize}
+    \item When classes are not linearly seperable
+    \item Resort to polynomial terms
+\end{itemize}
+
+\subsection{k-Neares Neighbors (KNN)}
+\begin{itemize}
+    \item A datapoint is know by the company it keeps
+    \item Computes $k$ nearest neighbours
+    \item Returns the most frequent class of the $k$ neighbours
+\end{itemize}
+\includegraphics[width=0.8\linewidth]{./img/knn.png}
+\subsubsection{Distance Metric}
+\begin{itemize}
+    \item Cosine Distance
+    \item Manhattan Distance
+    \item Euclidean Distance (most used)
+    \item Minkowski Distance
+\end{itemize}
+\subsubsection{Advantages}
+\begin{itemize}
+    \item Easy and simple ML model
+    \item Few hyperparameters to tune
+\end{itemize}
+
+\subsubsection{Disadvantages}
+\begin{itemize}
+    \item $k$ should be wisely selected
+    \item Large computation cost during runtime if sample size is large
+    \item Not efficient for high dimensional datasets
+    \item Proper scaling should be provided for fair treatment among features
+\end{itemize}
+
+\subsubsection{Hyperparameters}
+\begin{itemize}
+    \item \textbf{K Value}: how many neighbours to participate in the KNN algo.
+    \item \textbf{Distance Function}: Euclidean distance is most used
+\end{itemize}
