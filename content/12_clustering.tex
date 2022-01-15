@@ -69,8 +69,12 @@
 \end{itemize}
 \textbf{Inertia or within-cluster sum-of-squares (WCSS)}
 \begin{itemize}
-    \item Sum of squared distances to center
+    \item Sum of squared distances to center (euclidian distance)
     \item As small as possible
+\end{itemize}
+\textbf{Euclidian Distance:}
+\begin{itemize}
+    \item $(p_x - Center_x)^2 + (p_y - C1_y)^2$
 \end{itemize}
 \textbf{Silhouette Score}
 \begin{itemize}
@@ -78,4 +82,5 @@
     \item SS of a point: $\frac{b-a}{max(a,b)}$
     \item a: average intra-cluster distance (distance between each point within)
     \item b: average inter-cluster distance (distance between a cluster and its nearest neighbour)
+    \item Represents the Quality of the Clustering
 \end{itemize}

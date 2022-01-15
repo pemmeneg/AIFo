@@ -10,11 +10,31 @@
     \item Iterative Method
     \item Each iteration, the model parameters are updated such as that the Loss (MSE) is reduced
 \end{itemize}
+\begin{center}
+    \textbf{Parametervektor zum Zeitpunkt $t+1$}\\
+    $\begin{bmatrix}
+        a \\b
+    \end{bmatrix}_{t+1} 
+    = 
+    \begin{bmatrix}
+        a\\b
+    \end{bmatrix}_{t} - \alpha 
+    \begin{bmatrix}
+        \frac{\delta E}{\delta a} \\ \frac{\delta E}{\delta b}
+    \end{bmatrix}
+    | \begin{bmatrix}
+        a \\ b
+    \end{bmatrix}_{t}$\\
+    $\frac{\delta E}{\delta a} = \frac{1}{N} \displaystyle\sum_{i = 1}^{N}(y_i - (ax_i + b))*(-x)$\\
+    $\frac{\delta E}{\delta b} = \frac{1}{N} \displaystyle\sum_{i = 1}^{N}(y_i - (ax_i + b))*(-1)$
+\end{center}
 
 \subsection{Stochastic Gradient Descent (SGD)}
 \begin{itemize}
     \item At each iteration, the gradient is calculated on a (randomly selected) subset of the data
     \item For a fixed learning rate, SGD does not converge
+    \item Each itereration, the entire parameter vector gets optimized
+    \item Only finds the local Minimum
 \end{itemize}
 
 \subsubsection{Annealed SGD}

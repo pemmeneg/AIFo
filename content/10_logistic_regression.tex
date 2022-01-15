@@ -34,3 +34,9 @@
     \item For each of the training data, we want to maximize the likelihood of correct prediction
     \item We can use Gradient Descent to find W
 \end{itemize}
+\begin{center}
+    \textbf{Maximize Cost:}\\
+    \[ Maximum Cost_{2}(W) = \sum_{y=1}^{N} \ln(p(x_{i}) + \sum_{y=0}^{N} \ln(1-p(x_{i})) \]
+    \textbf{Loss Function (Minimize Cost):}\\
+    \[ Minimize Cost(W) = \frac{-1}{N} \displaystyle\sum_{i = 1}^{N} (y_i * ln(p_i)) + (1 - y_i) * ln(1 - p_i)\]
+\end{center}

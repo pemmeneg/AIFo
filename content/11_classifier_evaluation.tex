@@ -25,6 +25,15 @@
 \begin{itemize}
     \item $MR = 1 - TPR$
 \end{itemize}
+\textbf{False Positive Rate (FPR)}
+\begin{itemize}
+    \item $f_p / (f_p + t_n)$
+\end{itemize}
+\textbf{True Negative Rate (TNR)}
+\begin{itemize}
+    \item $t_n / (t_n + f_p)$
+    \item $1 - FPR$
+\end{itemize}
 
 \subsection{Why Accuracy is not enough?}
 \begin{itemize}
@@ -44,6 +53,8 @@
 
 \subsection{Receiver Operating Characteristics}
 \begin{itemize}
+    \item Multiple FPR / TPR needed to draw a curve
+    \item Für eine Kurve müsste man den Classifier mit allen Schwellenwerten im Interval auswerten
     \item Defined by FPR and TPR as x and y axes
     \item Visualizes tradeoff between TP (benefits) and FP (cost)
 \end{itemize}
@@ -82,12 +93,13 @@
 \end{itemize}
 \includegraphics[width=0.8\linewidth]{./img/knn.png}
 \subsubsection{Distance Metric}
-\begin{itemize}
-    \item Cosine Distance
-    \item Manhattan Distance
-    \item Euclidean Distance (most used)
-    \item Minkowski Distance
-\end{itemize}
+\textbf{Cosine Distance (Skalar)}
+\[ \frac{x_{1}*x_{2}}{||x_{1}||*||x_{2}||} \]
+\textbf{Manhattan Disance (Quadrat um 90deg gedreht)}
+\[ \sum_{i=1}^{n} |x_{1,n} - x_{2,n}|\] 
+\textbf{Euclidean Distance (Kreis)}
+\[ \sqrt{\sum_{i=1}^n (x_{i} - x_{i})^2} \]
+\textbf{Minkowski Distance}
 \subsubsection{Advantages}
 \begin{itemize}
     \item Easy and simple ML model

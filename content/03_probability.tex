@@ -22,7 +22,7 @@ $Pr(X=x)$ / $P(x)$: $1/6$ for each possible value
 \end{itemize}
 E.g. Dice1 = 5 AND Dice2 = 4\\
 $P_{XY}(5,4) = 1/36$\\ 
-\includegraphics[width=0.5\linewidth]{./img/joint_probability.png} \\
+\includegraphics[width=0.35\linewidth]{./img/joint_probability.png} \\
 \textbf{Independant random Variables}
 \begin{itemize}
     \item Joint Probability is the product of the individual probabilities
@@ -36,7 +36,7 @@ $P(X,Y,Z) = P(X) * P(Y) * P(Z)$ (only if independant)\\
     \item $X$: observe clouds (0=no, 1=small, 2=big)
     \item $Y$: observe rain (0=no, 1=light, 2=moderate, 3=heavy)
 \end{itemize}
-\textbf{Conditional Probability}
+\textbf{Conditional (Marginal) Probability}
 \begin{itemize}
     \item One variable is no longer random
     \item X is observed, its value is fixed
@@ -48,4 +48,9 @@ $P(Y | X) = \frac{P(X,Y)}{P(X)}$\\
 \textbf{Bayes Rule}\\
 $P(X|Y)*P(Y) = P(Y|X)*P(X)$\\ 
 Therefore:\\
-$P(Y|X) = \frac{P(X|Y)*P(Y)}{P(X)}$
+$P(Y|X) = \frac{P(X|Y)*P(Y)}{P(X)}$\\ 
+\textbf{Derive}
+\begin{itemize}
+    \item Joint to Marginal: Ok
+    \item Marginal to Joint: Not possible
+\end{itemize}
